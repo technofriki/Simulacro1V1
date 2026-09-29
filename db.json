@@ -1,0 +1,89 @@
+{
+  "productos": [
+    {
+      "id": "1",
+      "nombre": "Notebook Lenovo IdeaPad 3",
+      "precio": 485000,
+      "categoria": "Informática",
+      "descripcion": "Notebook con procesador Intel Core i5, 8 GB de RAM y 256 GB SSD."
+    },
+    {
+      "id": "2",
+      "nombre": "Mouse Logitech M185",
+      "precio": 18500,
+      "categoria": "Informática",
+      "descripcion": "Mouse inalámbrico óptico con conexión USB."
+    },
+    {
+      "id": "3",
+      "nombre": "Teclado Redragon Kumara",
+      "precio": 62000,
+      "categoria": "Informática",
+      "descripcion": "Teclado mecánico compacto con conexión USB."
+    },
+    {
+      "id": "4",
+      "nombre": "Monitor Samsung 24 pulgadas",
+      "precio": 215000,
+      "categoria": "Informática",
+      "descripcion": "Monitor LED Full HD de 24 pulgadas."
+    },
+    {
+      "id": "5",
+      "nombre": "Auriculares Sony WH-CH520",
+      "precio": 89000,
+      "categoria": "Audio",
+      "descripcion": "Auriculares inalámbricos con batería de larga duración."
+    },
+    {
+      "id": "6",
+      "nombre": "Parlante JBL Go 4",
+      "precio": 75000,
+      "categoria": "Audio",
+      "descripcion": "Parlante portátil Bluetooth resistente al agua."
+    },
+    {
+      "id": "7",
+      "nombre": "Smart TV Philips 43 pulgadas",
+      "precio": 395000,
+      "categoria": "Electrodomésticos",
+      "descripcion": "Televisor Smart TV 4K de 43 pulgadas."
+    },
+    {
+      "id": "8",
+      "nombre": "Licuadora Moulinex",
+      "precio": 67000,
+      "categoria": "Electrodomésticos",
+      "descripcion": "Licuadora de 600 W con jarra de vidrio."
+    },
+    {
+      "id": "9",
+      "nombre": "Cafetera Oster",
+      "precio": 112000,
+      "categoria": "Electrodomésticos",
+      "descripcion": "Cafetera eléctrica con capacidad para 12 tazas."
+    },
+    {
+      "id": "10",
+      "nombre": "Mochila Samsonite",
+      "precio": 98000,
+      "categoria": "Accesorios",
+      "descripcion": "Mochila para notebook de hasta 15 pulgadas."
+    },
+    {
+      "id": "11",
+      "nombre": "Webcam Logitech C920",
+      "precio": 145000,
+      "categoria": "Informática",
+      "descripcion": "Webcam Full HD con micrófono incorporado."
+    },
+    {
+      "id": "12",
+      "nombre": "Smartwatch Xiaomi Redmi Watch",
+      "precio": 125000,
+      "categoria": "Accesorios",
+      "descripcion": "Reloj inteligente con pantalla táctil y monitoreo de actividad."
+    }
+  ]
+}
+
