@@ -1,1 +1,12 @@
-<p>productos-list works!</p>
+<h2>Productos</h2>
+
+
+@for (p of productos(); track p.id){
+    <div>
+        <h3>{{ p.nombre}}</h3>
+        <p>Precio: ${{ p.precio  }}</p>
+        <p>{{ p.categoria  }}</p>
+        <a [routerLink]="['/productos', p.id]">Ver detalle</a>
+        <a [routerLink]="['/form', p.id]">Editar</a>
+    </div>
+}
