@@ -1,1 +1,13 @@
-<p>producto-detail works!</p>
+@if (error()){
+    <p>{{ error() }}</p>
+} @else if (producto(); as p){
+    <h2>{{ p.nombre }}</h2>
+    <p>Precio: ${{ p.precio }}</p>
+    <p>Categoria: {{ p.categoria }}</p>
+    <p>{{ p.descripcion }}</p>
+
+    <a [routerLink]="['/form', p.id]">Editar</a>
+    <a routerLink="/productos">Volver al listado</a>
+} @else {
+    <p>Cargando producto...</p>
+}

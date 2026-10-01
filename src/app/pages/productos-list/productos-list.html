@@ -1,12 +1,32 @@
 <h2>Productos</h2>
+<div class="filtros">
+    <input 
+        type="text"
+        placeholder="Buscar por nombre.."
+        [value]="busqueda()"
+        (input)="actualizarBusqueda($event)"/>
+    <button type="button" (click)="ordenarPor('nombre')">
+        Nombre @if (campoOrden() === 'nombre'){
+            {{ascendente() ? 'ASC' : 'DESC'}}
+        }
+    </button>    
+    <button type="button" (click)="ordenarPor('precio')">
+        Precio @if (campoOrden() === 'precio'){
+            {{ascendente() ? 'ASC' : 'DESC'}}
+        }
+    </button>
+</div>
 
 
-@for (p of productos(); track p.id){
-    <div>
+@for (p of productosFiltrados(); track p.id){
+    <div class="card">
         <h3>{{ p.nombre}}</h3>
         <p>Precio: ${{ p.precio  }}</p>
         <p>{{ p.categoria  }}</p>
         <a [routerLink]="['/productos', p.id]">Ver detalle</a>
         <a [routerLink]="['/form', p.id]">Editar</a>
+        <button type="button" (click)="eliminar(p.id!)">Eliminar</button>
     </div>
+} @empty{
+    <p>No se encontraron productos.</p>
 }

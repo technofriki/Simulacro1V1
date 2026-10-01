@@ -1,1 +1,47 @@
-<p>producto-form works!</p>
+<h2>{{ esEdicion() ? 'Editar producto' : 'Nuevo producto' }}</h2>
+
+@if (error()){
+    <p>{{ error() }} </p>
+}
+
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <label>Nombre <input type="text" formControlName="nombre" /></label>
+
+    @if (c.nombre.touched && c.nombre.errors){
+        <p>
+            @if (c.nombre.errors['required']){
+                El nombre es obligatorio
+            } @else if (c.nombre.errors['minlength']){
+                El nombre debe tener al menos 3 caracteres
+            }
+        </p>
+    }
+
+    <label> Precio <input type="number" formControlName="precio" /></label>
+
+    @if (c.precio.touched && c.precio.errors){
+        <p>
+            @if(c.precio.errors['required']){
+                El precio es obligatorio
+            } @else if (c.precio.errors['min']){
+                El precio no puede ser menor a 0
+            } @else if (c.precio.errors['max']){
+                El precio no puede ser mayor a 500000
+            }
+        </p>
+    }
+
+    <label>Categoria <input type="text" formControlName="categoria" /></label>
+
+    @if (c.categoria.touched  && c.categoria.invalid){
+        <p>La categoria es obligatoria</p>
+    }
+
+    <label>Descripcion <textarea formControlName="descripcion"></textarea></label>
+
+    @if (c.descripcion.touched && c.descripcion.invalid){
+        <p>La descripcion es obligatoria</p>
+    }
+
+    <button type="submit">{{ esEdicion() ? 'Guardar cambios' : 'Crear producto' }}</button>
+</form>
